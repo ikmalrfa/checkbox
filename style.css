@@ -1,0 +1,121 @@
+ {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a12fc;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 280px;
+        }
+
+        .wrap {
+            background: #111111;
+            padding: 25px;
+            box-shadow: 0px 0px 8px -1px #fff;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .item:last-child {
+            margin-bottom: 0;
+        }
+
+        .mobilenav {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            border: 1px solid #d5d6d8;
+            color: #d5d6d8;
+            position: relative;
+            margin-right: 10px;
+            transition: 1.5s ease;
+        }
+
+        .fas,
+        .fab {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+        }
+
+        .checkbox {
+            width: 65px;
+            height: 35px;
+            position: relative;
+            appearance: none;
+            background: #000;
+            border: 1px solid white;
+            border-radius: 25px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .checkbox:before {
+            content: "";
+            position: absolute;
+            top: 4px;
+            left: 5px;
+            width: 28px;
+            height: 28px;
+            background: #f0f0f0;
+            border-radius: 50%;
+            transition: all 0.8s ease;
+        }
+
+        .checkbox:checked:before {
+            left: 32px;
+            background: #40e443;
+        }
+        .checkbox:after {
+            content: "";
+            position: absolute;
+            top: 4px;
+            left: 5px;
+            width: 28px;
+            height: 28px;
+            background: #f0f0f0;
+            transition: all 0.8s ease;
+            border-radius: 50%;
+        }
+        .checkbox:checked:after {
+            left: 32px;
+            background: lime;
+        }
+        .wifi.active .mobilenav {
+            background: red;
+            border-color: red;
+            color: #fff;
+        }
+
+        .bluetooth.active .mobilenav {
+            background: orange;
+            border-color: orange;
+            color: #fff;
+        }
+
+        .plane.active .mobilenav {
+            background: #40e443;
+            border-color: #40e443;
+            color: #fff;
+        }
+
+        .location.active .mobilenav {
+            background: blue;
+            border-color: blue;
+            color: #fff;
+        }
+        .h1 {
+            font-size: 10px;
+            font-color: #0a12fc;
